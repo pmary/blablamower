@@ -1,0 +1,15 @@
+{
+  "name": "blablamow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -e 'require(\"./index\").main(\"./instructions/dev_instructions\")'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.1.0"
+  }
+}

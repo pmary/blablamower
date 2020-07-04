@@ -1,0 +1,12 @@
+version: '3'
+services:
+  blablamower:
+    env_file:
+      - ./docker.env
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: blablamower
+    volumes:
+      - .:/app
+    tty: true
