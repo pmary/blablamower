@@ -10,8 +10,12 @@ docker-compose run blablamower /bin/bash
 ```
 
 # Run the application  
-Once you are logged in the container, from the /app directory, just run the
-following command:  
+Once you are logged in the container, from the /app directory, install the dependencies with:  
+```
+npm package install
+```
+
+Then you can execute the program using:
 
 ```
 npm run start
