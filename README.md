@@ -36,9 +36,8 @@ Then, for each mower (described on two lines), we pass the parameters to a Mower
 class instance, runed into a child process managed by a process pool. Results 
 are passed back to the master.  
 A mower instance execute the instructions, one by one. Before moving forward the mower checks that the next position isn't outside of the lawn and that there is no mower already at this coordinates. If so, the mower remains in the position and this command is discarded.  
-To check the position availability, I created a `DataBase` class that impersonate a distributed file system, allowing every mower to know if a position is free and to communicate there updated position via dedicated methods. This methods write/remove files on the local filesystem, a file represent an occupied position, it's name is formed by the X and Y coordinate variables.  
+To check the position availability, I created a `DataBase` class that impersonate a databsse / distributed file system, allowing every mower to know if a position is free and to communicate there own position via dedicated methods. Under the hood, this methods write/remove files on the local filesystem, a file representing an occupied position by it's name, formed by the X and Y coordinate variables.  
 
 I used the Node.js ability to spawn child processes to instantiate a process pool and processed multiple mowers simultaneously. The capacity of the pool is defined in `operateMowerFork.js`.
 
-When all the mowers are done, results are printed
-in the the order that the mower appeared in the input.
+When all the mowers are done, results are printed in the the order that the mower appeared in the input.
