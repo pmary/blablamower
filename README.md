@@ -1,4 +1,5 @@
 # Setup for local development
+## Using Docker
 First, you need to have Docker up and runing.  
 
 After cloning this repository on your local machine, run the following command.
@@ -9,8 +10,11 @@ logging you into as root :
 docker-compose run blablamower /bin/bash
 ```
 
+## On your own system
+You just need to have Node.js 12.18.x.  
+
 # Run the application  
-Once you are logged in the container, from the /app directory, install the dependencies with:  
+Install the dependencies with:  
 ```
 npm package install
 ```
